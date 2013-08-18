@@ -7,6 +7,14 @@ Libraries and tools: coffeescript for javascript, less for css, gruntjs, bootstr
 
 http://www.scribblepic.appspot.com
 
+## Running webserver ##
+You can run the development web server either via GoogleAppEngineLauncher or command line.
+
+Command Line to start at port 8000:
+*Note: Assumes that GoogleAppEngineLauncher has created a symlink to dev_appserver.py 
+> dev_appserver.py appengine_content/ --skip_sdk_update_check=yes --port=8000 --admin_port=8009
+
+
 ## Compiling ##
 For productivity, coffeescript and less have been choosen and 
 must be compiled into their respective js and css files for deployment.
