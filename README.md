@@ -10,7 +10,7 @@ http://www.scribblepic.appspot.com
 ## Running webserver ##
 You can run the development web server either via GoogleAppEngineLauncher or command line.
 
-Command Line to start at port 8000:
+Command Line to start at port 8000:    
 *Note: Assumes that GoogleAppEngineLauncher has created a symlink to dev_appserver.py* 
 
 	dev_appserver.py appengine_content/ --skip_sdk_update_check=yes --port=8000 --admin_port=8009
@@ -32,7 +32,7 @@ listed in our package.json. To do this, where package.json resides, run:
 > npm install
 
   
-Yay! By default, the minified and comined js and css files are included.
+Yay! By default, the minified and comined js and css files are included.   
 DO NOT edit site.css or app.*.js, it will be overridden by grunt's compile/build step.   
 Say you made a change in site.less, to compile to css:
 > grunt css
@@ -41,14 +41,15 @@ Should you wish to make changes to app.coffee or would like to
 debug the non-minified js files in the browser, run:  
 > grunt js
 
-For deployment, we want all javascript files to be minfied, compressed and combined.   
+For deployment, we want all javascript files to be minfied, compressed and combined.     
 We also want css files to be minified, compressed and combined.   
 To do so, simply run the default grunt command:
 > grunt
 
-To see all grunt <commands>, look in Gruntfile.js   
+To see all grunt commands, look in Gruntfile.js   
 If there is a task you would like to run and it is not in grunt.registerTask(), 
-all tasks listed can be individually called. For example, with the following Gruntfile.js:
+you may call the individual task directly.     
+For example, with the following Gruntfile.js:
 
     coffee: {
       compile: {
@@ -65,11 +66,11 @@ all tasks listed can be individually called. For example, with the following Gru
       },
     },
 
-Some example tasks:
-> grunt coffee:compile
-> grunt uglify:build
-> grunt less:debugCss
+Some example tasks: 
+> grunt coffee:compile    
+> grunt uglify:build    
+> grunt less:debugCss    
 
 We can watch for coffee and less file changes and automatically compile them:
-> grunt watch
+> grunt watch   
 I have only set up to watch app.coffee and site.less, but other files can be added as needed
