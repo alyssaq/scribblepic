@@ -5,6 +5,8 @@ HTML5 canvas in python google app engine
 
 Libraries and tools: coffeescript for javascript, less for css, gruntjs, bootstrap
 
+http://www.scribblepic.appspot.com
+
 ## Compiling ##
 For productivity, coffeescript and less have been choosen and 
 must be compiled into their respective js and css files for deployment.
