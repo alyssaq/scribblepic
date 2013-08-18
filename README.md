@@ -16,7 +16,7 @@ Command Line to start at port 8000:
 	dev_appserver.py appengine_content/ --skip_sdk_update_check=yes --port=8000 --admin_port=8009
 
     
-## Compiling coffeescript, less and minimising with Gruntjs ##
+## Compiling coffee, less and minifying with Gruntjs ##
 For productivity, coffeescript and less have been choosen and 
 must be compiled into their respective js and css files for deployment.
 We use grunt to perform the repetitive tasks to compile coffee, less, minify and combine.
