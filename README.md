@@ -7,7 +7,7 @@ Libraries and tools: coffeescript for javascript, less for css, gruntjs, bootstr
 
 http://www.scribblepic.appspot.com
 
-## Running webserver ##
+## Running Google App Engine dev webserver ##
 You can run the development web server either via GoogleAppEngineLauncher or command line.
 
 Command Line to start at port 8000:    
@@ -71,6 +71,6 @@ Some example tasks:
 > grunt uglify:build    
 > grunt less:debugCss    
 
-We can watch for coffee and less file changes and automatically compile them:
+We can watch for coffee and less file changes and automatically compile them.   
+I have only set up to watch changes on app.coffee and site.less, but other files can be added as needed:
 > grunt watch   
-I have only set up to watch app.coffee and site.less, but other files can be added as needed
