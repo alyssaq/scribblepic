@@ -1,0 +1,138 @@
+@import url(http://fonts.googleapis.com/css?family=Simonetta:900);
+body {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+#headerTitle {
+  font-family: 'Simonetta', cursive;
+}
+//Custom container 
+.container-narrow {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.container-narrow > hr {
+  margin: 41px 0 auto;
+}
+
+//Main marketing message and sign up button 
+.jumbotron {
+  margin: 60px 0;
+  text-align: center;
+}
+.jumbotron h1 {
+  font-size: 60px;
+  line-height: 1;
+  padding-bottom: 1em;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+.jumbotron p.lead {
+  font-weight: bold;
+}
+
+.tweetlink {
+  float: right;
+}
+a:hover {
+  text-decoration: none;
+}
+
+//Supporting marketing content 
+.marketing {
+  margin: 60px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+.no-show {
+  display: None;
+}
+
+.nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
+  background-color: rgb(170,70,170);
+}
+
+//  Cavas Styles
+@pad: 10px;
+
+h3 {
+  font-size: 18px;
+}
+
+#drawingCanvas {
+  border: 1px dashed #ccc;
+  cursor: crosshair;
+}
+#btnLinewidth {
+  max-width: 50px;
+  border: none;
+}
+.btnDraw {
+  width: 100%;
+  padding: 15px;
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: @pad solid transparent;
+  border-right: @pad solid transparent;
+  border-top: @pad solid #fff;
+  margin: 0 auto;
+}
+#btnEraser {
+  background-color: #d3d3d3;
+}
+#btnClear {
+  margin-top: @pad * 2;
+}
+#drawingTools {
+  margin-top: 70px;
+  opacity: 0.1;
+}
+#btnDone {
+  opacity: 0.1;
+  margin-right: 10%;
+}
+#btnClear {
+  vertical-align: bottom;
+  margin-left: @pad * 2;
+}
+
+#uploader {
+  height: 70px;
+}
+
+#btnImgSelect {
+  color: #000;
+}
+
+#imageInfo {
+  padding: @pad;
+}
+#resultCanvas {
+  margin-top: @pad;
+  margin-left: @pad;
+  display: none;
+}
+//Drop box styles 
+input[type="file"] { // Hide the browser file select text
+  display: none;
+}
+#drop {
+  margin-top: @pad;
+  border: 10px dashed #ccc;
+  width: 95%;
+  height: 300px;
+  float: left;
+}
+#drop.hover {
+  border: 10px dashed #0c0;
+}
+#imageInfo {
+  white-space: nowrap;
+}

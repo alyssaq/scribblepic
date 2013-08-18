@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <aside id="message" class="lead">
+    (1) Please choose an image (max size of 5MB) <br>
+    (2) Select the <span class="foregound"> foreground </span> and <span class="background"> background </span> using the drawing tools <br>
+    (3) Once you are done, click on Done! <br>
+    (4) On success, a trimap of your image will be displayed.
+  </aside>
+
+</div> <!-- Close the base container-narrow so that the drawing tools have more container width-->
+
+  <section class="row-fluid">
+    <section class="span3">
+      <div id="drawingTools" style="background-color:white">
+        <h3>Drawing tools:</h3>
+        <p>
+          <button id="btnForeG" class="btnDraw btn btn-info" type="button">Foreground</button>
+          <button id="btnBackG" class="btnDraw btn btn-warning" type="button">Background</button>
+
+          <button id="btnEraser" class="btnDraw btn" type="button">Erase</button>
+          
+        </p>
+        <!--
+        <p>
+           <button class="btn" onclick="toImage()">Trimap Snapshot</button>
+           <button class="btn" onclick="toDesktop()">Save to Desktop</button> 
+        </p>
+        -->
+        
+        
+        Radius:
+        <div id="radiusBox" style="background-color:red;overflow:hidden;">
+          <div class="arrow-down"></div>
+          <div style="position:relative;left:50%;clear:left;float:left;">
+            <div style="padding-top:5px;">
+              
+              <input type="number" style="right:50%;position:relative"id="btnLinewidth" value="5"></input>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-inverse pull-right" type="button" id="btnClear">Clear</button>
+
+      </div>
+    </section>
+
+    <section class="span9">
+      <div id="uploader">
+        <label for="imgSelect" style="display:inline"><button class="btn" type="button" id="btnImgSelect">Choose image...</button></label>
+        <input type="file" accept="image/*" id="imgSelect" name="imgSelect"/>
+        <button type="submit" class="btn btn-large btn-success pull-right" id="btnDone">Done</button>
+        <div id="imageInfo"></div>
+      </div>
+
+      <div id="drop">Or drop image here!</div>
+      <canvas id="resultCanvas" width="400" height="400"></canvas>
+
+    </section>
+  </section> <!-- End row-fluid -->
+
+<div class="container-narrow"> <!-- Re-open the base container-narrow-->
+
+<script>
+  function toDesktop() {
+    if ($("#dropImg").length > 0) {
+      var canvas = document.getElementById("resultCanvas");
+      Canvas2Image.saveAsPNG(canvas);
+    }
+  }
+</script>
+<script src="js/modernizr-2.6.2.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js">\x3C/script>')</script>
+<script src="js/app.js"></script>
+{% endblock %}
