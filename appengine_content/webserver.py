@@ -33,7 +33,7 @@ class ImgUploadHandler(webapp2.RequestHandler):
 
         if match is not None and len(match.groups()) > 1:
             imgb64 = match.group(2)
-            b = base64.b64decode(imgb64)
+            #b = base64.b64decode(imgb64)
             #do something with image
             return self.response.out.write(trimap)
 
